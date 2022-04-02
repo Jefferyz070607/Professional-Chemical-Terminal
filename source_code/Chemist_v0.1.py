@@ -1,6 +1,8 @@
 operation_num=0
 round_num=0
 import time
+from unicodedata import name
+
 print("\n\n--------------------Copyright @Clapping Technology Co., Ltd || Clapping Studio All Rights Reserved--------------------\n\n\n")
 print("欢迎使用化学终端v0.1，本应用为纯Python开发，访问官网https://Jefferyz070607以查看详情\n\n\n")
 class inorganic_substance():
@@ -75,6 +77,7 @@ class inorganic_substance():
             self.name="氢氧化亚铁"
         elif self.f_e==26 and self.f_n==1 and self.s_e==8 and self.s_n==3 and self.t_e==1 and self.t_n==3:
             self.name="氢氧化铁"
+        #铜
         elif self.f_e==29 and self.f_n==1 and self.s_e==0 and self.s_n==0:
             self.name="铜单质"
         elif self.f_e==29 and self.f_n==1 and self.s_e==8 and self.s_n==1 and self.t_e==0 and self.t_n==0:
@@ -125,12 +128,24 @@ class inorganic_substance():
             self.name="氢氧化钠"
         elif self.f_e==11 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==8 and self.t_n==4:
             self.name="硫酸钠"
+        elif self.f_e==11 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==16 and self.t_n==1 and self.ff_e==8 and self.ff_n==4:
+            self.name="硫酸氢钠"
         elif self.f_e==11 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==8 and self.t_n==3:
             self.name="亚硫酸钠"
+        elif self.f_e==11 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==16 and self.t_n==1 and self.ff_e==8 and self.ff_n==3:
+            self.name="亚硫酸氢钠"
         elif self.f_e==11 and self.f_n==2 and self.s_e==6 and self.s_n==1 and self.t_e==8 and self.t_n==3:
             self.name="碳酸钠"
         elif self.f_e==11 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==6 and self.t_n==1 and self.ff_e==8 and self.ff_n==3:
             self.name="碳酸氢钠"
+        elif self.f_e==11 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==1:
+            self.name="次氯酸钠"
+        elif self.f_e==11 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==2:
+            self.name="亚氯酸钠"
+        elif self.f_e==11 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==3:
+            self.name="氯酸钠"
+        elif self.f_e==11 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==4:
+            self.name="高氯酸钠"
         #稀有气体
         elif self.f_e==2 and self.f_n==1 and self.s_e==0 and self.s_n==0:
             self.name="氦气"
@@ -142,15 +157,16 @@ class inorganic_substance():
         print("结果为:",self.name)
         print("\n\n\n")
 def element_print():
-    print("H(1)    OH(8.1)    SO₄(16.8)   SO₃(16.8.5)   CO₃(6.8)    He(2)\n")
-    print("Li(3) Be      HCO₃(1.6.8)              B  C(6)  N  O(8)  F  Ne\n")
+    print("H(1)                                                     He(2)\n")
+    print("Li(3) Be                               B  C(6)  N  O(8)  F  Ne\n")
     print("Na(11) Mg                            Al Si P  S(16)  Cl(17) Ar\n")
-    print("K  Ca Sc Ti V  Cr Mn Fe(26) Co Ni Cu(29) Zn Ga Ge As Se Br Kr\n")
-    print("Rb Sr Y  Zr  Nb  Mo  Tc Ru   Rh  Pd Ag  Cd In Sn Sb  Te I  Xe\n")
-    print("Cs Ba    Hf Ta  W   Re  Os  Ir  Put  Au  Hg Tl Pb Bi Po At Rn\n")
-    print("Fr Ra    Lf Db  Sg  Bh  Hs  Mt  Ds Rg   Cn Nh Fl  Mc Lv Ts Og\n")
-    print("La ~ Lu  La Ce  Pr  Nd  Pm Sm  Eu Gd  Td  Dy Ho  Er Tm  Yb Lu\n")
+    print("K  Ca Sc Ti V  Cr Mn Fe(26) Co Ni Cu(29) Zn  Ga Ge As Se Br Kr\n")
+    print("Rb Sr Y  Zr  Nb  Mo  Tc Ru   Rh  Pd  Ag  Cd In Sn Sb  Te I  Xe\n")
+    print("Cs Ba    Hf Ta  W   Re  Os  Ir  Put  Au  Hg Tl  Pb Bi Po At Rn\n")
+    print("Fr Ra    Lf Db  Sg  Bh  Hs  Mt  Ds Rg   Cn  Nh Fl  Mc Lv Ts Og\n")
+    print("La ~ Lu  La Ce  Pr  Nd  Pm Sm  Eu Gd  Td  Dy  Ho  Er Tm  Yb Lu\n")
     print("Ac ~ Lr  Ac Th Pa U  Np Pu (括号内有数字的元素可用)\n\n\n")
+    print("酸根(算作一种元素):OH(8.1)  SO₄(16.8)  SO₃(16.8.0)  CO₃(6.8) HCO₃(1.6.8) HSO₄(1.16.8) HSO₃(1.16.8.0)")
 def element_choic():
     global element_choice
     element_print()
@@ -159,7 +175,7 @@ def element_choic():
     print("输入元素的顺序必须按官网文档的格式(a化b，a前b后；酸按氢，酸根；碱按金属离子，氢氧根；盐按金属离子，酸根进行排列)\n\n")
     strr="请选择您想组成的化学物质的第"+str(round_num+1)+"种元素:"
     element_choice=input(strr)
-    element_available_list=["1","1.6.8","2","3","6","6.8","8","8.1","11","16","16.8","16.8.5","17","26","29"]
+    element_available_list=["1","1.6.8","1.16.8","1.16.8.0","2","3","6","6.8","8","8.1","11","16","16.8","16.8.0","17","26","29"]
     while(element_choice not in element_available_list):
         print("您的输入有误，请重新输入")
         element_choice=input("请输入您想选择的元素的序号:")
@@ -172,6 +188,14 @@ def element_judge():
     if element_choice=="1.6.8":
         print("您选择的元素为碳酸氢根(HCO₃)")
         element="HCO₃"
+        print("\n")
+    if element_choice=="1.16.8":
+        print("您选择的元素为硫酸氢根(HSO₃)")
+        element="HSO₄"
+        print("\n")
+    if element_choice=="1.16.8.0":
+        print("您选择的元素为亚硫酸氢根(HSO₃)")
+        element="HSO₃"
         print("\n")
     if element_choice=="6":
         print("您选择的元素为碳(C)")
@@ -201,7 +225,7 @@ def element_judge():
         print("您选择的元素为硫酸根(SO₄)")
         element="SO₄"
         print("\n")
-    if element_choice=="16.8.5":
+    if element_choice=="16.8.0":
         print("您选择的元素为亚硫酸根(SO₃)")
         element="SO₃"
         print("\n")
@@ -229,6 +253,7 @@ def inorganic_substance_build():
             time.sleep(2)
             element_choic()
             element_judge()
+            print("\n")
             strr="请输入该无机物的"+element+"原子数量:"
             atom_num=input(strr)
             print("\n")
@@ -255,7 +280,7 @@ def inorganic_substance_build():
                 i_s.s_n=1*(int(atom_num))
                 i_s.t_e=8
                 i_s.t_n=3*(int(atom_num))
-            elif element_choice=="16.8.5":
+            elif element_choice=="16.8.0":
                 i_s.s_e=16
                 i_s.s_n=1*(int(atom_num))
                 i_s.t_e=8
@@ -264,6 +289,20 @@ def inorganic_substance_build():
                 i_s.s_e=1
                 i_s.s_n=1*(int(atom_num))
                 i_s.t_e=6
+                i_s.t_n=1*(int(atom_num))
+                i_s.ff_e=8
+                i_s.ff_n=3*(int(atom_num))
+            elif element_choice=="1.16.8":
+                i_s.s_e=1
+                i_s.s_n=1*(int(atom_num))
+                i_s.t_e=16
+                i_s.t_n=1*(int(atom_num))
+                i_s.ff_e=8
+                i_s.ff_n=4*(int(atom_num))
+            elif element_choice=="1.16.8.0":
+                i_s.s_e=1
+                i_s.s_n=1*(int(atom_num))
+                i_s.t_e=16
                 i_s.t_n=1*(int(atom_num))
                 i_s.ff_e=8
                 i_s.ff_n=3*(int(atom_num))
@@ -334,7 +373,7 @@ def inorganic_substance_build2():
                 i_s2.s_n=1*(int(atom_num))
                 i_s2.t_e=8
                 i_s2.t_n=3*(int(atom_num))
-            elif element_choice=="16.8.5":
+            elif element_choice=="16.8.0":
                 i_s2.s_e=16
                 i_s2.s_n=1*(int(atom_num))
                 i_s2.t_e=8
@@ -343,6 +382,20 @@ def inorganic_substance_build2():
                 i_s2.s_e=1
                 i_s2.s_n=1*(int(atom_num))
                 i_s2.t_e=6
+                i_s2.t_n=1*(int(atom_num))
+                i_s2.ff_e=8
+                i_s2.ff_n=3*(int(atom_num))
+            elif element_choice=="1.16.8":
+                i_s2.s_e=1
+                i_s2.s_n=1*(int(atom_num))
+                i_s2.t_e=16
+                i_s2.t_n=1*(int(atom_num))
+                i_s2.ff_e=8
+                i_s2.ff_n=4*(int(atom_num))
+            elif element_choice=="1.16.8.0":
+                i_s2.s_e=1
+                i_s2.s_n=1*(int(atom_num))
+                i_s2.t_e=16
                 i_s2.t_n=1*(int(atom_num))
                 i_s2.ff_e=8
                 i_s2.ff_n=3*(int(atom_num))
@@ -479,7 +532,7 @@ def operation():
                 i_s2.f_n=int(atom_num)
                 operation_num-=1
                 round_num+=1
-                if operation_num==0:                    
+                if operation_num==0:
                     i_s2.build()
                     i_s2.call()
                     print("\n\n")
@@ -546,6 +599,9 @@ def process(name1,name2,name3=0,name4=0):
     elif "碳酸氢钠" in name_list and name2=="none":
         print("         Δ")
         print("2NaHCO₃======Na₂CO₃+H₂O+CO₂↑")
+    elif "次氯酸" in name_list and name2=="none":
+        print("      光照")
+        print("2HClO======2HCl+O₂↑")
     #酸和单质反应
     #铁
     elif "铁单质" in name_list and "硫酸" in name_list and name3==0 and name4==0:
@@ -562,28 +618,31 @@ def process(name1,name2,name3=0,name4=0):
     elif "铁单质" in name_list and "盐酸" in name_list and name3==0:
         print("Fe+2HCl=====FeCl₂+H₂↑")
     #铜
-    elif "铜" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name4==1 or name4==2):
-        print("             Δ")
+    elif "铜单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
+        print("               Δ")
         print("Cu+2H₂SO₄(浓)======CuSO₄+SO₂↑+2H₂O")
     #碳
-    elif "碳单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name4==2):
-        print("             Δ")
-        print("C+2H₂SO₄(浓)======CO₂↑+2H₂O+2SO₂↑")
-    elif "碳单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name4==2):
+    elif "碳单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
         print("             Δ")
         print("C+2H₂SO₄(浓)======CO₂↑+2H₂O+2SO₂↑")
     #硫
-    elif "硫单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name4==2):
+    elif "硫单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
         print("             Δ")
         print("S+2H₂SO₄(浓)======3SO₂↑+2H₂O")
     #钠
+    elif "钠单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==1):
+        print("2Na+H₂SO₄(稀)======Na₂SO₄+H₂↑")
+    elif "钠单质" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
+        print("2Na+2H₂SO₄(浓)======Na₂SO₄+SO₂↑+2H₂O")
     elif "钠单质" in name_list and "盐酸" in name_list and name3==0:
         print("2Na+2HCl=====2NaCl+H₂↑")
     #单质和化合物置换反应
-    elif "硫酸铜" in name_list and "铁" in name_list and name3==0:
+    elif "铁" in name_list and "硫酸铜" in name_list and name3==0:
         print("Fe+CuSO₄======FeSO₄+Cu")
-    #单质氧化，卤化反应
-    #氧化
+    elif "铁" in name_list and "氯化铜" in name_list and name3==0:
+        print("Fe+CuCl₂======FeCl₂+Cu")
+    #氧化反应
+    #单质
     elif "氧气" in name_list and "氢气" in name_list and name3==0:
         print("      点燃     ")
         print("2H₂+O₂======2H₂O")
@@ -600,13 +659,17 @@ def process(name1,name2,name3=0,name4=0):
         print("C+O₂======CO₂")
         print("       Δ")
         print("2C+O₂======2CO")
-    elif "硫单质" in name_list and "氢气" in name_list and name3==0:
+    elif "硫单质" in name_list and "氧气" in name_list and name3==0:
         print("      Δ    ")
         print("S+O₂======SO₂")
     elif "钠单质" in name_list and "氧气" in name_list and name3==0:
         print("4Na+O₂======2Na₂O")
         print("        Δ    ")
         print("2Na+O₂======Na₂O₂")
+    #其他
+    elif "氧化亚铁" in name_list and "氧气" in name_list and name3==0:
+        print("         Δ")
+        print("6FeO+O₂======2Fe₃O₄")
     #氯化
     elif "钠单质" in name_list and "氯气" in name_list and name3==0:
         print("2Na+Cl₂======2NaCl")
@@ -638,37 +701,38 @@ def process(name1,name2,name3=0,name4=0):
     elif "氢氧化钠" in name_list and "盐酸" in name_list and name3==0:
         print("NaOH+HCl======NaCl₂+H₂O")
     #碱性氧化物和酸反应
-    #氧化铁和硫酸
+    #铁和硫酸
     elif "氧化亚铁" in name_list and "硫酸" in name_list and name3==0:
         print("FeO+H₂SO₄======FeSO₄+H₂O")
     elif "氧化铁" in name_list and "硫酸" in name_list and name3==0:
         print("Fe₂O₃+3H₂SO₄======Fe₂(SO₄)₃+3H₂O")
     elif "四氧化三铁" in name_list and "硫酸" in name_list and name3==0:
         print("Fe₃O₄+4H₂SO₄======FeSO₄+Fe₂(SO₄)₃+4H₂O")
-    #氧化铁和盐酸
+    #铁和盐酸
     elif "氧化亚铁" in name_list and "盐酸" in name_list and name3==0:
         print("FeO+2HCl======FeCl₂+H₂O")
     elif "氧化铁" in name_list and "盐酸" in name_list and name3==0:
         print("Fe₂O₃+6HCl======2FeCl₃+3H₂O")
-    #氧化铜和酸
+    #铜和酸
     elif "氧化铜" in name_list and "硫酸" in name_list and name3==0:
         print("CuO+H₂SO₄======CuSO₄+H₂O")
     elif "氧化铜" in name_list and "盐酸" in name_list and name3==0:
         print("CuO+2HCl======CuCl₂+H₂O")
-    #氧化钠和酸
+    #钠和酸
     elif "氧化钠" in name_list and "硫酸" in name_list and name3==0:
         print("Na₂O+H₂SO₄======Na₂SO₄+H₂O")
     elif "氧化钠" in name_list and "盐酸" in name_list and name3==0:
-        print("Na₂O+2HCl======2NaCl₂+H₂O")
+        print("Na₂O+2HCl======2NaCl+H₂O")
+    elif "过氧化钠" in name_list and "硫酸" in name_list and name3==0:
+        print("2Na₂O₂+2H₂SO₄======2Na₂SO₄+H₂O+O₂↑")
+    elif "过氧化钠" in name_list and "盐酸" in name_list and name3==0:
+        print("2Na₂O₂+4HCl======4NaCl+2H₂O+O₂↑")
+    elif "硫酸氢钠" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("NaHSO₄+NaOH======Na₂SO₄+H₂O")
     #碳酸盐和酸反应
     #铜
     elif "碳酸铜" in name_list and "硫酸" in name_list and name3==0:
         print("CuCO₃+H₂SO₄======CuSO₄+H₂O+CO₂↑")
-    elif "碳酸铜" in name_list and "盐酸" in name_list and name3==0:
-        print("CuCO₃+2HCl======CuCl₂+H₂O+CO₂↑")
-    #碱和酸性氧化物反应
-    elif "氢氧化钠" in name_list and "二氧化碳" in name_list and name3==0:
-        print("2NaOH+CO₂======Na₂CO₃+H₂O")
     elif "碳酸铜" in name_list and "盐酸" in name_list and name3==0:
         print("CuCO₃+2HCl======CuCl₂+H₂O+CO₂↑")
     #钠
@@ -676,17 +740,49 @@ def process(name1,name2,name3=0,name4=0):
         print("Na₂CO₃+H₂SO₄======Na₂SO₄+H₂O+CO₂↑")
     elif "碳酸钠" in name_list and "盐酸" in name_list and name3==0:
         print("Na₂CO₃+2HCl======2NaCl+H₂O+CO₂↑")
-    #亚金属离子氧化反应
-    elif "氧化亚铁" in name_list and "氧气" in name_list and name3==0:
-        print("         Δ")
-        print("6FeO+O₂======2Fe₃O₄")
+    #盐酸盐和硫酸反应
+    elif "氯化铁" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
+        print("                   Δ")
+        print("2FeCl₃+3H₂SO₄(浓)======2Fe₂(SO₄)₃+6HCl↑")
+    elif "氯化铜" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
+        print("                       Δ")
+        print("CuCl₂+H₂SO₄(浓)======CuSO₄+2HCl↑")
+    elif "氯化钠" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
+        print("NaCl+H₂SO₄(浓)======NaHSO₄+HCl↑")
+        print("                Δ")
+        print("NaCl+H₂SO₄(浓)======Na₂SO₄+2HCl↑")
+    #碱和酸性氧化物反应
+    #钠
+    elif "氢氧化钠" in name_list and "二氧化碳" in name_list and name3==0:
+        print("2NaOH+CO₂======Na₂CO₃+H₂O")
+    elif "氢氧化钠" in name_list and "二氧化硫" in name_list and name3==0:
+        print("2NaOH+SO₂======Na₂SO₃+H₂O")
+        print("NaOH+SO₂======Na₂HSO₃")
+    #可溶性碱和硫酸盐反应
+    #钠
+    elif "氢氧化钠" in name_list and "硫酸铁" in name_list and name3==0:
+        print("6NaOH+Fe₂(SO₄)₃======2Fe(OH)₃↓+Na₂SO₄")
+    elif "氢氧化钠" in name_list and "硫酸亚铁" in name_list and name3==0:
+        print("2NaOH+FeSO₄======Fe(OH)₂↓+Na₂SO₄")
+    elif "氢氧化钠" in name_list and "硫酸铜" in name_list and name3==0:
+        print("2NaOH+CuSO₄======Cu(OH)₂↓+Na₂SO₄")
+    #可溶性碱和盐酸盐反应
+    elif "氢氧化钠" in name_list and "氯化铁" in name_list and name3==0:
+        print("3NaOH+FeCl₃======Fe(OH)₃↓+NaCl")
+    elif "氢氧化钠" in name_list and "氯化亚铁" in name_list and name3==0:
+        print("2NaOH+FeCl₂======Fe(OH)₂↓+2NaCl")
+    elif "氢氧化钠" in name_list and "氯化铜" in name_list and name3==0:
+        print("2NaOH+CuCl₂======Cu(OH)₂↓+2NaCl")
     #氢气还原反应
-    elif "氢气" in name_list and "氧化铜" in name_list and name3==0:
+    elif "氧化铜" in name_list and "氢气" in name_list and name3==0:
         print("        Δ")
         print("H₂+CuO======Cu+H₂O")
-    elif "氢气" in name_list and "氧化铁" in name_list and name3==0:
-        print("          Δ")
+    elif "氧化铁" in name_list and "氢气" in name_list and name3==0:
+        print("          高温")
         print("3H₂+Fe₂O₃======2Fe+3H₂O")
+    elif "四氧化三铁" in name_list and "氢气" in name_list and name3==0:
+        print("           Δ")
+        print("4H₂+Fe₃O₄======3Fe+3H₂O")
     #碳单质还原反应
     elif "碳单质" in name_list and "氧化铜" in name_list and name3==0:
         print("       高温")
@@ -713,21 +809,21 @@ def process(name1,name2,name3=0,name4=0):
     elif "一氧化碳" in name_list and "四氧化三铁" in name_list and name3==0:
         print("          Δ")
         print("4CO+Fe₃O₄======3Fe+4CO₂")
-    #氧化加成反应
+    #氧化还原反应
     elif "一氧化碳" in name_list and "氧气" in name_list and name3==0:
         print("       点燃")
         print("2CO+O₂======2CO₂")
     #氯还原反应
     elif "硫化氢" in name_list and "氯气" in name_list and name3==0:
         print("Cl₂+H₂S=====2HCl+S↓")
-    #氯化加成反应
+    #氯化的氧化还原反应
     elif "氯化亚铁" in name_list and "氯气" in name_list and name3==0:
         print("2FeCl₂+Cl₂=====2FeCl₃")
     elif "氢氧亚铁" in name_list and "氯气" in name_list and name3==0:
         print("6Fe(OH)2+3Cl₂======4Fe(OH)₃+2FeCl₃")
     #含氯反应
     elif "氯气" in name_list and "水" in name_list and name3==0:
-        print("Cl₂+H₂O=====HCl+HClO")
+        print("Cl₂+H₂O=====HCl+HClO(可逆)")
     #亚氢氧化物和过氧化氢反应
     elif "氢氧化亚铁" in name_list and "过氧化氢" in name_list and name3==0:
         print("2Fe(OH)₂+H₂O₂======2Fe(OH)₃")
@@ -742,12 +838,14 @@ def process(name1,name2,name3=0,name4=0):
         print("SO₂+H₂O======H₂SO₃")
     elif "三氧化硫" in name_list and "水" in name_list and name3==0:
         print("SO₃+H₂O======H₂SO₄")
-    #金属单质和水反应
+    #单质和水反应
     elif "钠单质" in name_list and "水" in name_list and name3==0:
         print("2Na+2H₂O======2NaOH+H₂↑")
     elif "铁单质" in name_list and "水" in name_list and name3==0:
         print("              高温")
         print("3Fe+4H₂O(气态)======Fe₃O₄+4H₂↑")
+    elif "氯气" in name_list and "水" in name_list and name3==0:
+        print("Cl₂+H₂O======HClO+HCl(可逆)")
     #活跃金属氧化物和水反应
     elif "氧化钠" in name_list and "水" in name_list and name3==0:
         print("Na₂O+2H₂O======2NaOH")
@@ -758,6 +856,11 @@ def process(name1,name2,name3=0,name4=0):
         print("Na₂O+CO₂======Na₂CO₃")
     elif "过氧化钠" in name_list and "二氧化碳" in name_list and name3==0:
         print("2Na₂O₂+2CO₂======2Na₂CO₃+O₂↑")
+    #氯气和可溶性碱反应
+    elif "氢氧化钠" in name_list and "氯气" in name_list and name3==0:
+        print("2NaOH+Cl₂======NaCl+NaClO+H₂O")
+        print("            Δ")
+        print("6NaOH+3Cl₂======5NaCl+NaClO₃+3H₂O")
     #硫化反应
     elif "钠单质" in name_list and "硫单质" in name_list and name3==0:
         print("        Δ")
@@ -770,6 +873,9 @@ def process(name1,name2,name3=0,name4=0):
     elif "铜单质" in name_list and "硫单质" in name_list and name3==0:
         print("      Δ")
         print("Cu+S======Cu₂S")
+    #其他反应
+    elif "亚硫酸钠" in name_list and "次氯酸钠" in name_list and name3==0:
+        print("NaClO+Na₂SO₃======NaCl+Na₂SO₄")
     else:
         print("error:Can not be proceed")
     print("\n\n反应结束\n\n")
