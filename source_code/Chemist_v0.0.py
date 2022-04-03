@@ -297,12 +297,13 @@ def inorganic_substance_build2():
                 print("\n\n")
                 if i_s.name=="硫酸" or i_s2.name=="硫酸":
                     choice=input("请选择硫酸的浓度(输入1或2指定浓或稀，输入其他内容将显示所有相关反应) 1.稀 2.浓:")
-                if choice=="1":
-                    process(i_s.name,i_s2.name,0,1)
-                elif choice=="2":
-                    process(i_s.name,i_s2.name,0,2)
-                else:
-                    process(i_s.name,i_s2.name,0,0)
+                    if choice=="1":
+                        process(i_s.name,i_s2.name,0,1)
+                    elif choice=="2":
+                        process(i_s.name,i_s2.name,0,2)
+                    else:
+                        process(i_s.name,i_s2.name,0,0)
+                process(i_s.name,i_s2.name)
                 break
         if round_num==2:
             print("\n\n")
@@ -419,18 +420,19 @@ def operation():
                 i_s2.f_n=int(atom_num)
                 operation_num-=1
                 round_num+=1
-                if operation_num==0:                    
+                if operation_num==0:
                     i_s2.build()
                     i_s2.call()
                     print("\n\n")
                     if i_s.name=="硫酸" or i_s2.name=="硫酸":
                         choice=input("请选择硫酸的浓度(输入1或2指定浓或稀，输入其他内容将显示所有相关反应) 1.稀 2.浓:")
-                    if choice=="1":
-                        process(i_s.name,i_s2.name,0,1)
-                    elif choice=="2":
-                        process(i_s.name,i_s2.name,0,2)
-                    else:
-                        process(i_s.name,i_s2.name,0,0)
+                        if choice=="1":
+                            process(i_s.name,i_s2.name,0,1)
+                        elif choice=="2":
+                            process(i_s.name,i_s2.name,0,2)
+                        else:
+                            process(i_s.name,i_s2.name,0,0)
+                    process(i_s.name,i_s2.name)
                 else:
                     inorganic_substance_build2()
 def process(name1,name2,name3=0,name4=0):
