@@ -797,6 +797,16 @@ def process(name1,name2,name3=0,name4=0):
         print("Ca+H₂SO₄======CaSO₄+H₂↑")
     elif "钙单质" in name_list and "盐酸" in name_list and name3==0:
         print("Ca+2HCl=====CaCl₂+H₂↑")
+    #钾
+    elif "钾单质" in name_list and "硫酸" in name_list and name3==0 and name4==1:
+        print("2K+H₂SO₄(稀)======K₂SO₄+H₂↑")
+    elif "钾单质" in name_list and "硫酸" in name_list and name3==0 and name4==2:
+        print("2K+H₂SO₄(浓)======2KOH+SO₂↑")
+    elif "钾单质" in name_list and "硫酸" in name_list and name3==0 and name4==0:
+        print("2K+H₂SO₄(稀)======K₂SO₄+H₂↑")
+        print("2K+H₂SO₄(浓)======2KOH+SO₂↑")
+    elif "钾单质" in name_list and "盐酸" in name_list and name3==0:
+        print("2K+2HCl=====2KCl+H₂↑")
     #单质和化合物置换反应
     elif "铁" in name_list and "硫酸铜" in name_list and name3==0:
         print("Fe+CuSO₄======FeSO₄+Cu")
@@ -831,6 +841,12 @@ def process(name1,name2,name3=0,name4=0):
         print("2Ca+O₂======2CaO")
         print("       Δ    ")
         print("Ca+O₂======CaO₂")
+    elif "钾单质" in name_list and "氧气" in name_list and name3==0:
+        print("4K+O₂======2K₂O")
+        print("      点燃    ")
+        print("2K+O₂======K₂O₂")
+        print("      点燃    ")
+        print("K+O₂======KO₂")
     #其他
     elif "氧化亚铁" in name_list and "氧气" in name_list and name3==0:
         print("         Δ")
@@ -850,7 +866,11 @@ def process(name1,name2,name3=0,name4=0):
     elif "钠单质" in name_list and "氯气" in name_list and name3==0:
         print("2Na+Cl₂======2NaCl")
     elif "钙单质" in name_list and "氯气" in name_list and name3==0:
+        print("        Δ")
         print("Ca+Cl₂======CaCl₂")
+    elif "钾单质" in name_list and "氯气" in name_list and name3==0:
+        print("        Δ")
+        print("2K+Cl₂======2KCl")
     #酸碱中和反应
     #铁
     elif "氢氧化铁" in name_list and "硫酸" in name_list and name3==0:
@@ -870,8 +890,13 @@ def process(name1,name2,name3=0,name4=0):
     #钙
     elif "氢氧化钙" in name_list and "硫酸" in name_list and name3==0:
         print("Ca(OH)₂+H₂SO₄======CaSO₄+2H₂O")
-    elif "氢氧化钠" in name_list and "盐酸" in name_list and name3==0:
+    elif "氢氧化钙" in name_list and "盐酸" in name_list and name3==0:
         print("Ca(OH)₂+HCl======CaCl₂+H₂O")
+    #钾
+    elif "氢氧化钾" in name_list and "硫酸" in name_list and name3==0:
+        print("2KOH+H₂SO₄======K₂SO₄+2H₂O")
+    elif "氢氧化钾" in name_list and "盐酸" in name_list and name3==0:
+        print("KOH+HCl======KCl+H₂O")
     #碱性氧化物和酸反应
     #铁和酸
     elif "氧化亚铁" in name_list and "硫酸" in name_list and name3==0:
@@ -898,8 +923,6 @@ def process(name1,name2,name3=0,name4=0):
         print("2Na₂O₂+2H₂SO₄======2Na₂SO₄+H₂O+O₂↑")
     elif "过氧化钠" in name_list and "盐酸" in name_list and name3==0:
         print("2Na₂O₂+4HCl======4NaCl+2H₂O+O₂↑")
-    elif "硫酸氢钠" in name_list and "氢氧化钠" in name_list and name3==0:
-        print("NaHSO₄+NaOH======Na₂SO₄+H₂O")
     #钙和酸
     elif "氧化钙" in name_list and "硫酸" in name_list and name3==0:
         print("CaO+H₂SO₄======CaSO₄+H₂O")
@@ -908,7 +931,20 @@ def process(name1,name2,name3=0,name4=0):
     elif "过氧化钙" in name_list and "硫酸" in name_list and name3==0:
         print("2CaO₂+2H₂SO₄======2CaSO₄+2H₂O+O₂↑")
     elif "过氧化钙" in name_list and "盐酸" in name_list and name3==0:
-        print("2CaO₂+4HCl======2NaCl+2H₂O+O₂↑")
+        print("2CaO₂+4HCl======2CaCl₂+2H₂O+O₂↑")
+    #钾和酸
+    elif "氧化钾" in name_list and "硫酸" in name_list and name3==0:
+        print("K₂O+H₂SO₄======K₂SO₄+H₂O")
+    elif "氧化钾" in name_list and "盐酸" in name_list and name3==0:
+        print("K₂O+2HCl======2KCl+H₂O")
+    elif "过氧化钾" in name_list and "硫酸" in name_list and name3==0:
+        print("2K₂O₂+2H₂SO₄======2K₂SO₄+H₂O+O₂↑")
+    elif "过氧化钾" in name_list and "盐酸" in name_list and name3==0:
+        print("2K₂O₂+4HCl======4KCl+2H₂O+O₂↑")
+    elif "超氧化钾" in name_list and "硫酸" in name_list and name3==0:
+        print("4KO₂+2H₂SO₄======2K₂SO₄+2H₂O+3O₂↑")
+    elif "过氧化钾" in name_list and "盐酸" in name_list and name3==0:
+        print("4KO₂+4HCl======4KCl+2H₂O+3O₂↑")
     #亚硫酸盐和酸反应
     #钠
     elif "亚硫酸钠" in name_list and "硫酸" in name_list and name3==0:
@@ -920,8 +956,15 @@ def process(name1,name2,name3=0,name4=0):
     #钙
     elif "亚硫酸钙" in name_list and "硫酸" in name_list and name3==0:
         print("CaSO₃+H₂SO₄======CaSO₄+H₂O+SO₂↑")
-    elif "亚硫酸钠" in name_list and "盐酸" in name_list and name3==0:
+    elif "亚硫酸钙" in name_list and "盐酸" in name_list and name3==0:
         print("CaSO₃+2HCl======CaCl₂+H₂O+SO₂↑")
+    #钾
+    elif "亚硫酸钾" in name_list and "硫酸" in name_list and name3==0:
+        print("K₂SO₃+H₂SO₄======K₂SO₄+H₂O+SO₂↑")
+        print("2K₂SO₃+H₂SO₄======K₂SO₄+2KHSO₃")
+    elif "亚硫酸钾" in name_list and "盐酸" in name_list and name3==0:
+        print("K₂SO₃+2HCl======2NaCl+H₂O+SO₂↑")
+        print("K₂SO₃+HCl======NaCl+NaHSO₃")
     #碳酸盐和酸反应
     #铜
     elif "碳酸铜" in name_list and "硫酸" in name_list and name3==0:
@@ -938,6 +981,11 @@ def process(name1,name2,name3=0,name4=0):
         print("CaCO₃+H₂SO₄======CaSO₄+H₂O+CO₂↑")
     elif "碳酸钙" in name_list and "盐酸" in name_list and name3==0:
         print("CaCO₃+2HCl======CaCl₂+H₂O+CO₂↑")
+    #钾
+    elif "碳酸钾" in name_list and "硫酸" in name_list and name3==0:
+        print("K₂CO₃+H₂SO₄======K₂SO₄+H₂O+CO₂↑")
+    elif "碳酸钾" in name_list and "盐酸" in name_list and name3==0:
+        print("K₂CO₃+2HCl======2KCl+H₂O+CO₂↑")
     #碳酸氢盐和酸反应
     #钠
     elif "碳酸氢钠" in name_list and "硫酸" in name_list and name3==0:
@@ -948,8 +996,11 @@ def process(name1,name2,name3=0,name4=0):
     elif "碳酸氢钠" in name_list and "硫酸" in name_list and name3==0:
         print("NaHCO₃+H₂SO₄======NaHSO₄+H₂O+CO₂↑")
         print("2NaHCO₃+H₂SO₄======Na₂SO₄+2H₂O+2CO₂↑")
-    elif "碳酸氢钠" in name_list and "盐酸" in name_list and name3==0:
-        print("NaHCO₃+HCl======2NaCl+H₂O+CO₂↑")
+    #钾
+    elif "碳酸氢钾" in name_list and "硫酸" in name_list and name3==0:
+        print("2KHCO₃+H₂SO₄======K₂SO₄+2H₂O+2CO₂↑")
+    elif "碳酸氢钾" in name_list and "盐酸" in name_list and name3==0:
+        print("KHCO₃+HCl======KCl+H₂O+CO₂↑")
     #盐酸盐和硫酸反应
     elif "氯化铁" in name_list and "硫酸" in name_list and name3==0 and (name4==0 or name2==2):
         print("                   Δ")
@@ -970,7 +1021,7 @@ def process(name1,name2,name3=0,name4=0):
         print("NaOH+CO₂======NaHCO₃+H₂O")
     elif "氢氧化钠" in name_list and "二氧化硫" in name_list and name3==0:
         print("2NaOH+SO₂======Na₂SO₃+H₂O")
-        print("NaOH+SO₂======Na₂HSO₃")
+        print("NaOH+SO₂======NaHSO₃")
     #钙
     elif "氢氧化钙" in name_list and "二氧化碳" in name_list and name3==0:
         print("Ca(OH)₂+CO₂======CaCO₃↓+H₂O")
@@ -978,6 +1029,13 @@ def process(name1,name2,name3=0,name4=0):
     elif "氢氧化钙" in name_list and "二氧化硫" in name_list and name3==0:
         print("Ca(OH)₂+SO₂======CaSO₃+H₂O")
         print("Ca(OH)₂+2SO₂======Ca(HSO₃)₂")
+    #钾
+    elif "氢氧化钾" in name_list and "二氧化碳" in name_list and name3==0:
+        print("2KOH+CO₂======K₂CO₃+H₂O")
+        print("KOH+CO₂======KHCO₃+H₂O")
+    elif "氢氧化钾" in name_list and "二氧化硫" in name_list and name3==0:
+        print("2KOH+SO₂======K₂SO₃+H₂O")
+        print("KOH+SO₂======KHSO₃")
     #可溶性碱和硫酸盐反应
     #钠
     elif "氢氧化钠" in name_list and "硫酸铁" in name_list and name3==0:
@@ -993,7 +1051,15 @@ def process(name1,name2,name3=0,name4=0):
         print("Ca(OH)₂+FeSO₄======Fe(OH)₂↓+CaSO₄")
     elif "氢氧化钙" in name_list and "硫酸铜" in name_list and name3==0:
         print("Ca(OH)₂+CuSO₄======Cu(OH)₂↓+CaSO₄")
+    #钾
+    elif "氢氧化钾" in name_list and "硫酸铁" in name_list and name3==0:
+        print("6KOH+Fe₂(SO₄)₃======2Fe(OH)₃↓+K₂SO₄")
+    elif "氢氧化钾" in name_list and "硫酸亚铁" in name_list and name3==0:
+        print("2KOH+FeSO₄======Fe(OH)₂↓+K₂SO₄")
+    elif "氢氧化钾" in name_list and "硫酸铜" in name_list and name3==0:
+        print("2KOH+CuSO₄======Cu(OH)₂↓+K₂SO₄")
     #可溶性碱和盐酸盐反应
+    #钠
     elif "氢氧化钠" in name_list and "氯化铁" in name_list and name3==0:
         print("3NaOH+FeCl₃======Fe(OH)₃↓+NaCl")
     elif "氢氧化钠" in name_list and "氯化亚铁" in name_list and name3==0:
@@ -1007,10 +1073,21 @@ def process(name1,name2,name3=0,name4=0):
         print("Ca(OH)₂+FeCl₂======Fe(OH)₂↓+CaCl₂")
     elif "氢氧化钙" in name_list and "氯化铜" in name_list and name3==0:
         print("Ca(OH)₂+CuCl₂======Cu(OH)₂↓+CaCl₂")
+    #钾
+    elif "氢氧化钾" in name_list and "氯化铁" in name_list and name3==0:
+        print("3KOH+FeCl₃======Fe(OH)₃↓+NaCl")
+    elif "氢氧化钾" in name_list and "氯化亚铁" in name_list and name3==0:
+        print("2KOH+FeCl₂======Fe(OH)₂↓+2NaCl")
+    elif "氢氧化钾" in name_list and "氯化铜" in name_list and name3==0:
+        print("2KOH+CuCl₂======Cu(OH)₂↓+2NaCl")
     #盐和盐反应
     elif "氯化钙" in name_list and "碳酸钠" in name_list and name3==0:
         print("CaCl₂+Na₂CO₃======CaCO₃↓+2NaCl")
     elif "硫酸钙" in name_list and "碳酸钠" in name_list and name3==0:
+        print("CaSO₄+Na₂CO₃======CaCO₃↓+Na₂SO₄")
+    elif "氯化钙" in name_list and "碳酸钾" in name_list and name3==0:
+        print("CaCl₂+K₂CO₃======CaCO₃↓+2KCl")
+    elif "硫酸钙" in name_list and "碳酸钾" in name_list and name3==0:
         print("CaSO₄+Na₂CO₃======CaCO₃↓+Na₂SO₄")
     #氢气还原反应
     elif "氧化铜" in name_list and "氢气" in name_list and name3==0:
@@ -1108,6 +1185,13 @@ def process(name1,name2,name3=0,name4=0):
         print("CaO+H₂O======Ca(OH)₂")
     elif "过氧化钠" in name_list and "水" in name_list and name3==0:
         print("2CaO₂+2H₂O======2Ca(OH)₂+O₂↑")
+    #钾
+    elif "氧化钾" in name_list and "水" in name_list and name3==0:
+        print("K₂O+2H₂O======2KOH")
+    elif "过氧化钾" in name_list and "水" in name_list and name3==0:
+        print("2K₂O₂+2H₂O======4KOH+O₂↑")
+    elif "超氧化钾" in name_list and "水" in name_list and name3==0:
+        print("4KO₂+2H₂O======4KOH+3O₂↑")
     #碱性氧化物和酸性氧化物反应
     #钠
     elif "氧化钠" in name_list and "二氧化碳" in name_list and name3==0:
@@ -1128,12 +1212,39 @@ def process(name1,name2,name3=0,name4=0):
         print("CaO+SO₂======CaSO₃")
     elif "过氧化钠" in name_list and "二氧化硫" in name_list and name3==0:
         print("CaO₂+SO₂======CaSO₄")
+    #钾
+    elif "氧化钾" in name_list and "二氧化碳" in name_list and name3==0:
+        print("K₂O+CO₂======K₂CO₃")
+    elif "过氧化钾" in name_list and "二氧化碳" in name_list and name3==0:
+        print("2K₂O₂+2CO₂======2K₂CO₃+O₂↑")
+    elif "超氧化钾" in name_list and "二氧化碳" in name_list and name3==0:
+        print("4KO₂+2CO₂======2K₂CO₃+3O₂↑")
+    elif "氧化钾" in name_list and "二氧化硫" in name_list and name3==0:
+        print("K₂O+SO₂======K₂SO₃")
+    elif "过氧化钾" in name_list and "二氧化硫" in name_list and name3==0:
+        print("K₂O₂+SO₂======K₂SO₄")
+    elif "超氧化钾" in name_list and "二氧化硫" in name_list and name3==0:
+        print("2KO₂+SO₂======K₂SO₄+O₂↑")
     #氯气和可溶性碱反应
     elif "氢氧化钠" in name_list and "氯气" in name_list and name3==0:
         print("2NaOH+Cl₂======NaCl+NaClO+H₂O")
         print("            Δ")
         print("6NaOH+3Cl₂======5NaCl+NaClO₃+3H₂O")
+    elif "氢氧化钙" in name_list and "氯气" in name_list and name3==0:
+        print("2Ca(OH)₂+2Cl₂======CaCl₂+Ca(ClO)₂+2H₂O")
+        print("            Δ")
+        print("6Ca(OH)₂+6Cl₂======5CaCl₂+Ca(ClO₃)₂+6H₂O")
+    elif "氢氧化钾" in name_list and "氯气" in name_list and name3==0:
+        print("2KOH+Cl₂======KCl+KClO+H₂O")
+        print("            Δ")
+        print("6KOH+3Cl₂======5KCl+KClO₃+3H₂O")
     #硫化反应
+    elif "铁单质" in name_list and "硫单质" in name_list and name3==0:
+        print("      Δ")
+        print("Fe+S======Na₂S")
+    elif "铜单质" in name_list and "硫单质" in name_list and name3==0:
+        print("      Δ")
+        print("Cu+S======Cu₂S")
     elif "钠单质" in name_list and "硫单质" in name_list and name3==0:
         print("        Δ")
         print("2Na+S======Na₂S")
@@ -1144,18 +1255,18 @@ def process(name1,name2,name3=0,name4=0):
         print("Ca+S======CaS(爆炸)")
         print("      研磨")
         print("Ca+S======CaS(爆炸)")
-    elif "铁单质" in name_list and "硫单质" in name_list and name3==0:
-        print("      Δ")
-        print("Fe+S======Na₂S")
-    elif "铜单质" in name_list and "硫单质" in name_list and name3==0:
-        print("      Δ")
-        print("Cu+S======Cu₂S")
+    elif "钠单质" in name_list and "硫单质" in name_list and name3==0:
+        print("        Δ")
+        print("2K+S======K₂S(爆炸)")
+        print("      研磨")
+        print("2K+S======K₂S(爆炸)")
     #取代反应
     #氯
     elif "氯气" in name_list and "氢氧化钠" in name_list and name3==0:
         print("Cl₂+2NaOH======NaCl+NaClO+H₂O")
-    elif "氯气" in name_list and "氢氧化钙" in name_list and name3==0:
-        print("2Cl₂+2Ca(OH)₂======CaCl₂+Ca(ClO)₂+2H₂O")
+        print("           Δ")
+        print("3Cl₂+6NaOH======5NaCl+NaClO+3H₂O")
+    
     #氢化反应
     elif "钠单质" in name_list and "氢单质" in name_list and name3==0:
         print("      Δ")
@@ -1163,11 +1274,16 @@ def process(name1,name2,name3=0,name4=0):
     elif "钙单质" in name_list and "氢单质" in name_list and name3==0:
         print("      高温")
         print("Ca+H₂======CaH₂")
+    elif "钾单质" in name_list and "氢单质" in name_list and name3==0:
+        print("      Δ")
+        print("2K+H₂======2KH")
     #氢化物和水反应
     elif "氢化钠" in name_list and "水" in name_list and name3==0:
         print("NaH+H₂O======NaOH+H₂↑")
     elif "氢化钙" in name_list and "水" in name_list and name3==0:
         print("CaH₂+H₂O======Ca(OH)₂+2H₂↑")
+    elif "氢化钾" in name_list and "水" in name_list and name3==0:
+        print("KH+H₂O======KOH+H₂↑")
     #归中反应和含氯酸盐和酸反应
     #钠
     elif "次氯酸钠" in name_list and "盐酸" in name_list and name3==0:
@@ -1214,6 +1330,27 @@ def process(name1,name2,name3=0,name4=0):
     elif "高氯酸钙" in name_list and "硫酸" in name_list and name3==0:
         print("Ca(ClO₄)₂+2H₂SO₄======Ca(HSO₄)₂+2HClO₄")
         print("Ca(ClO₄)₂+H₂SO₄======CaSO₄+2HClO₄")
+    #钾
+    elif "次氯酸钾" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO+2HCl(浓)======NaCl+Cl₂↑+H₂O")
+    elif "亚氯酸钾" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO₂+4HCl(浓)======NaCl+2Cl₂↑+2H₂O")
+    elif "氯酸钾" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO₃+6HCl(浓)======NaCl+3Cl₂↑+3H₂O")
+    elif "高氯酸钾" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO₄+8HCl(浓)======NaCl+4Cl₂↑+4H₂O")
+    elif "次氯酸钾" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO+H₂SO₄======NaHSO₄+HClO")
+        print("2NaClO+H₂SO₄======Na₂SO₄+2HClO")
+    elif "亚氯酸钾" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO₂+H₂SO₄======NaHSO₄+HClO₂")
+        print("2NaClO₂+H₂SO₄======Na₂SO₄+2HClO₂")
+    elif "氯酸钾" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO₃+H₂SO₄======NaHSO₄+HClO₃")
+        print("2NaClO₃+H₂SO₄======Na₂SO₄+2HClO₃")
+    elif "高氯酸钾" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO₄+H₂SO₄======NaHSO₄+HClO₄")
+        print("2NaClO₄+H₂SO₄======Na₂SO₄+2HClO₄")
     #氯的氧化物和氧气
     elif "一氧化氯" in name_list and "氧气" in name_list and name3==0:
         print("        点燃")
@@ -1239,6 +1376,12 @@ def process(name1,name2,name3=0,name4=0):
         print("4ClO₂+2Ca(OH)₂======Ca(ClO₃)₂+Ca(ClO₂)₂+H₂O")
     elif "三氧化氯" in name_list and "氢氧化钙" in name_list and name3==0:
         print("4ClO₃+2Ca(OH)₂======Ca(ClO₄)₂+Ca(ClO₃)₂+H₂O")
+    elif "一氧化氯" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("2ClO+2KOH======KClO+KClO₂+H₂O")
+    elif "二氧化氯" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("2ClO₂+2KOH======KClO₃+KClO₂+H₂O")
+    elif "三氧化氯" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("2ClO₃+2KOH======KClO₄+KClO₃+H₂O")
     #盐和水
     elif "次氯酸钠" in name_list and "水" in name_list and name3==0:
         print("NaClO+H₂O======NaOH+HClO(可逆)")
@@ -1256,6 +1399,14 @@ def process(name1,name2,name3=0,name4=0):
         print("Ca(ClO₃)₂+2H₂O======Ca(OH)₂+2HClO₃(可逆)")
     elif "高氯酸钙" in name_list and "水" in name_list and name3==0:
         print("Ca(ClO₄)₂+2H₂O======Ca(OH)₂+2HClO₄(可逆)")
+    elif "次氯酸钾" in name_list and "水" in name_list and name3==0:
+        print("KClO+H₂O======KOH+HClO(可逆)")
+    elif "亚氯酸钾" in name_list and "水" in name_list and name3==0:
+        print("KClO₂+H₂O======KOH+HClO₂(可逆)")
+    elif "氯酸钾" in name_list and "水" in name_list and name3==0:
+        print("KClO₃+H₂O======KOH+HClO₃(可逆)")
+    elif "高氯酸钾" in name_list and "水" in name_list and name3==0:
+        print("KClO₄+H₂O======KOH+HClO₄(可逆)")
     #酸和碱
     elif "次氯酸" in name_list and "氢氧化钠" in name_list and name3==0:
         print("NaOH+HClO======NaClO+H₂O(可逆)")
@@ -1273,25 +1424,92 @@ def process(name1,name2,name3=0,name4=0):
         print("Ca(OH)₂+2HClO₃======Ca(ClO₃)₂+2H₂O(可逆)")
     elif "高氯酸" in name_list and "氢氧化钙" in name_list and name3==0:
         print("Ca(OH)₂+2HClO₄======Ca(ClO₄)₂+2H₂O(可逆)")
+    elif "次氯酸" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("KOH+HClO======KClO+H₂O(可逆)")
+    elif "亚氯酸" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("KOH+HClO₂======KClO₂+H₂O(可逆)")
+    elif "正氯酸" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("KOH+HClO₃======KClO₃+H₂O(可逆)")
+    elif "高氯酸" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("KOH+HClO₄======KClO₄+H₂O(可逆)")
     #酸式盐和碱反应
+    elif "硫酸氢钾" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("KHSO₄+NaOH======K₂SO₄+H₂O")
+    elif "硫酸氢钠" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("NaHSO₄+NaOH======Na₂SO₄+H₂O")
+    elif "亚硫酸氢钠" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("NaHSO₃+NaOH======Na₂SO₃+H₂O")
+    elif "硫酸氢钙" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("Ca(HSO₄)₂+Ca(OH)₂======2CaSO₄+2H₂O")
+    elif "亚硫酸氢钙" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("Ca(HSO₃)₂+Ca(OH)₂======2CaSO₃↓+2H₂O")
     elif "碳酸氢钙" in name_list and "氢氧化钠" in name_list and name3==0:
         print("Ca(HCO₃)₂+NaOH======NaHCO₃+CaCO₃↓+H₂O")
         print("Ca(HCO₃)₂+2NaOH======Na₂CO₃+CaCO₃↓+2H₂O")
+    elif "碳酸氢钙" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("Ca(HCO₃)₂+KOH======KHCO₃+CaCO₃↓+H₂O")
+        print("Ca(HCO₃)₂+2KOH======K₂CO₃+CaCO₃↓+2H₂O")
     elif "硫酸氢钙" in name_list and "氢氧化钠" in name_list and name3==0:
         print("Ca(HSO₄)₂+NaOH======NaHSO₄+CaSO₄+H₂O")
         print("Ca(HSO₄)₂+2NaOH======Na₂SO₄+CaSO₄+2H₂O")
+    elif "硫酸氢钙" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("Ca(HSO₄)₂+KOH======KHSO₄+CaSO₄+H₂O")
+        print("Ca(HSO₄)₂+2KOH======K₂SO₄+CaSO₄+2H₂O")
     elif "亚硫酸氢钙" in name_list and "氢氧化钠" in name_list and name3==0:
         print("Ca(HSO₃)₂+NaOH======NaHSO₃+CaSO₃+H₂O")
         print("Ca(HSO₃)₂+2NaOH======Na₂SO₃+CaSO₃+2H₂O")
+    elif "亚硫酸氢钙" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("Ca(HSO₃)₂+NaOH======NaHSO₃+CaSO₃+H₂O")
+        print("Ca(HSO₃)₂+2KOH======K₂SO₃+CaSO₃+2H₂O")
     elif "碳酸氢钠" in name_list and "氢氧化钙" in name_list and name3==0:
         print("2NaHCO₃+Ca(OH)₂======Na₂CO₃+CaCO₃↓+2H₂O")
         print("NaHCO₃+Ca(OH)₂======NaOH+CaCO₃↓+H₂O")
+    elif "碳酸氢钠" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("2NaHCO₃+2KOH======Na₂CO₃+K₂CO₃+2H₂O")
+        print("NaHCO₃+2KOH======NaOH+K₂CO₃+H₂O")
     elif "硫酸氢钠" in name_list and "氢氧化钙" in name_list and name3==0:
         print("2NaHSO₄+Ca(OH)₂======Na₂SO₄+CaSO₄+2H₂O")
         print("NaHSO₄+Ca(OH)₂======NaOH+CaSO₄+H₂O")
+    elif "硫酸氢钠" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("2NaHSO₄+2KOH======Na₂SO₄+K₂SO₄+2H₂O")
+        print("NaHSO₄+2KOH======NaOH+K₂SO₄+H₂O")
     elif "亚硫酸氢钠" in name_list and "氢氧化钙" in name_list and name3==0:
         print("2NaHSO₃+Ca(OH)₂======Na₂SO₃+CaSO₃↓+2H₂O")
         print("NaHSO₄+Ca(OH)₂======NaOH+CaSO₃↓o+H₂O")
+    elif "亚硫酸氢钠" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("2NaHSO₃+2KOH======Na₂SO₃+K₂SO₃+2H₂O")
+        print("NaHSO₃+2KOH======NaOH+K₂SO₃+H₂O")
+    elif "碳酸氢钾" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("2KHCO₃+Ca(OH)₂======K₂CO₃+CaCO₃↓+2H₂O")
+        print("KHCO₃+Ca(OH)₂======KOH+CaCO₃↓+H₂O")
+    elif "碳酸氢钾" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("2KHCO₃+2NaOH======K₂CO₃+Na₂CO₃+2H₂O")
+        print("KHCO₃+2NaOH======KOH+Na₂CO₃+H₂O")
+    elif "硫酸氢钾" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("2KHSO₄+Ca(OH)₂======K₂SO₄+CaSO₄+2H₂O")
+        print("KHSO₄+Ca(OH)₂======KOH+CaSO₄+H₂O")
+    elif "硫酸氢钾" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("2KHSO₄+2NaOH======Na₂SO₄+K₂SO₄+2H₂O")
+        print("KHSO₄+2NaOH======KOH+Na₂SO₄+H₂O")
+    elif "亚硫酸氢钾" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("2KHSO₃+Ca(OH)₂======K₂SO₃+CaSO₃↓+2H₂O")
+        print("NaHSO₄+Ca(OH)₂======NaOH+CaSO₃↓o+H₂O")
+    elif "亚硫酸氢钾" in name_list and "氢氧化钾" in name_list and name3==0:
+        print("2KHSO₃+2NaOH======K₂SO₃+Na₂SO₃+2H₂O")
+        print("KHSO₃+2NaOH======KOH+Na₂SO₃+H₂O")
+    #亚硫酸盐和氧气反应
+    elif "亚硫酸钠" in name_list and "氧气" in name_list and name3==0:
+        print("2Na₂SO₃+O₂======2Na₂SO₄")
+    elif "亚硫酸氢钠" in name_list and "氧气" in name_list and name3==0:
+        print("2NaHSO₃+O₂======2NaHSO₄")
+    elif "亚硫酸钙" in name_list and "氧气" in name_list and name3==0:
+        print("2CaSO₃+O₂======2CaSO₄")
+    elif "亚硫酸氢钙" in name_list and "氧气" in name_list and name3==0:
+        print("Ca(HSO₃)₂+O₂======Ca(HSO₄)₂")
+    elif "亚硫酸钾" in name_list and "氧气" in name_list and name3==0:
+        print("2K₂SO₃+O₂======2K₂SO₄")
+    elif "亚硫酸氢钾" in name_list and "氧气" in name_list and name3==0:
+        print("2KHSO₃+O₂======2KHSO₄")
     #其他反应
     elif "亚硫酸钠" in name_list and "次氯酸钠" in name_list and name3==0:
         print("NaClO+Na₂SO₃======NaCl+Na₂SO₄")
@@ -1299,6 +1517,8 @@ def process(name1,name2,name3=0,name4=0):
         print("error:Can not be proceed")
     print("\n\n反应结束\n\n")
     print("实验结束，自动退出反应器")
+    print("程序已结束将在20s后自动关闭")
+    time.sleep(20)
 element_choic()
 element_judge()
 operation()
