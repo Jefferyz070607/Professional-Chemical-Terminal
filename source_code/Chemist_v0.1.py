@@ -45,8 +45,6 @@ class inorganic_substance():
             self.name="亚硫酸"
         elif self.f_e==1 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==0 and self.t_n==0:
             self.name="硫化氢"
-        elif self.f_e==29 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==0 and self.t_n==0:
-            self.name="硫化铜"
         #碳
         elif self.f_e==6 and self.f_n==1 and self.s_e==0 and self.s_n==0:
             self.name="碳单质"
@@ -80,6 +78,8 @@ class inorganic_substance():
         #铜
         elif self.f_e==29 and self.f_n==1 and self.s_e==0 and self.s_n==0:
             self.name="铜单质"
+        elif self.f_e==29 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==0 and self.t_n==0:
+            self.name="硫化铜"
         elif self.f_e==29 and self.f_n==1 and self.s_e==8 and self.s_n==1 and self.t_e==0 and self.t_n==0:
             self.name="氧化铜"
         elif self.f_e==29 and self.f_n==2 and self.s_e==8 and self.s_n==1 and self.t_e==0 and self.t_n==0:
@@ -122,7 +122,7 @@ class inorganic_substance():
             self.name="钠单质"
         elif self.f_e==11 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==0 and self.t_n==0:
             self.name="氢化钠"
-        elif self.f_e==11 and self.f_n==1 and self.s_e==16 and self.s_n==1 and self.t_e==0 and self.t_n==0:
+        elif self.f_e==11 and self.f_n==1 and self.s_e==16 and self.s_n==2 and self.t_e==0 and self.t_n==0:
             self.name="硫化钠"
         elif self.f_e==11 and self.f_n==2 and self.s_e==8 and self.s_n==1 and self.t_e==0 and self.t_n==0:
             self.name="氧化钠"
@@ -139,7 +139,7 @@ class inorganic_substance():
         elif self.f_e==11 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==16 and self.t_n==1 and self.ff_e==8 and self.ff_n==3:
             self.name="亚硫酸氢钠"
         elif self.f_e==11 and self.f_n==2 and self.s_e==16 and self.s_n==2 and self.t_e==8 and self.t_n==5 and self.ff_e==0 and self.ff_n==0:
-            self.name="亚硫酸氢钠"
+            self.name="焦亚硫酸氢钠"
         elif self.f_e==11 and self.f_n==2 and self.s_e==6 and self.s_n==1 and self.t_e==8 and self.t_n==3:
             self.name="碳酸钠"
         elif self.f_e==11 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==6 and self.t_n==1 and self.ff_e==8 and self.ff_n==3:
@@ -189,6 +189,43 @@ class inorganic_substance():
             self.name="氯酸钙"
         elif self.f_e==20 and self.f_n==1 and self.s_e==17 and self.s_n==2 and self.t_e==8 and self.t_n==8:
             self.name="高氯酸钙"
+        #钾
+        elif self.f_e==19 and self.f_n==1 and self.s_e==0 and self.s_n==0:
+            self.name="钾单质"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==0 and self.t_n==0:
+            self.name="氢化钾"
+        elif self.f_e==19 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==0 and self.t_n==0:
+            self.name="硫化钾"
+        elif self.f_e==19 and self.f_n==2 and self.s_e==8 and self.s_n==1 and self.t_e==0 and self.t_n==0:
+            self.name="氧化钾"
+        elif self.f_e==19 and self.f_n==2 and self.s_e==8 and self.s_n==2 and self.t_e==0 and self.t_n==0:
+            self.name="过氧化钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==8 and self.s_n==2 and self.t_e==0 and self.t_n==0:
+            self.name="超氧化钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==8 and self.s_n==1 and self.t_e==1 and self.t_n==1:
+            self.name="氢氧化钾"
+        elif self.f_e==19 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==8 and self.t_n==4:
+            self.name="硫酸钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==16 and self.t_n==1 and self.ff_e==8 and self.ff_n==4:
+            self.name="硫酸氢钾"
+        elif self.f_e==19 and self.f_n==2 and self.s_e==16 and self.s_n==1 and self.t_e==8 and self.t_n==3:
+            self.name="亚硫酸钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==16 and self.t_n==1 and self.ff_e==8 and self.ff_n==3:
+            self.name="亚硫酸氢钾"
+        elif self.f_e==19 and self.f_n==2 and self.s_e==6 and self.s_n==1 and self.t_e==8 and self.t_n==3:
+            self.name="碳酸钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==1 and self.s_n==1 and self.t_e==6 and self.t_n==1 and self.ff_e==8 and self.ff_n==3:
+            self.name="碳酸氢钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==0 and self.t_n==0:
+            self.name="氯化钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==1:
+            self.name="次氯酸钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==2:
+            self.name="亚氯酸钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==3:
+            self.name="氯酸钾"
+        elif self.f_e==19 and self.f_n==1 and self.s_e==17 and self.s_n==1 and self.t_e==8 and self.t_n==4:
+            self.name="高氯酸钾"
         #稀有气体
         elif self.f_e==2 and self.f_n==1 and self.s_e==0 and self.s_n==0:
             self.name="氦气"
@@ -200,14 +237,14 @@ class inorganic_substance():
         print("结果为:",self.name)
         print("\n\n\n")
 def element_print():
-    print("H(1)                                                     He(2)\n")
-    print("Li(3) Be                               B  C(6)  N  O(8)  F  Ne\n")
-    print("Na(11) Mg                            Al Si P  S(16)  Cl(17) Ar\n")
-    print("K Ca(20) Sc Ti V Cr Mn Fe(26) Co Ni Cu(29) Zn Ga Ge As Se Br Kr\n")
-    print("Rb Sr Y  Zr  Nb  Mo  Tc Ru   Rh  Pd  Ag  Cd In Sn Sb  Te I  Xe\n")
-    print("Cs Ba    Hf Ta  W   Re  Os  Ir  Put  Au  Hg Tl  Pb Bi Po At Rn\n")
-    print("Fr Ra    Lf Db  Sg  Bh  Hs  Mt  Ds Rg   Cn  Nh Fl  Mc Lv Ts Og\n")
-    print("La ~ Lu  La Ce  Pr  Nd  Pm Sm  Eu Gd  Td  Dy  Ho  Er Tm  Yb Lu\n")
+    print("H(1)                                                          He(2)\n")
+    print("Li(3) Be                                    B  C(6)  N  O(8)  F  Ne\n")
+    print("Na(11) Mg                                 Al Si P  S(16)  Cl(17) Ar\n")
+    print("K(19) Ca(20) Sc Ti V Cr Mn Fe(26) Co Ni Cu(29) Zn Ga Ge As Se Br Kr\n")
+    print("Rb  Sr Y  Zr  Nb  Mo  Tc Ru   Rh  Pd  Ag  Cd  In  Sn  Sb  Te  I  Xe\n")
+    print("Cs  Ba   Hf  Ta  W   Re  Os  Ir  Put  Au  Hg  Tl  Pb Bi  Po  At  Rn\n")
+    print("Fr Ra    Lf Db  Sg  Bh  Hs  Mt  Ds  Rg   Cn  Nh  Fl  Mc  Lv  Ts  Og\n")
+    print("La ~ Lu  La  Ce  Pr  Nd  Pm  Sm  Eu  Gd  Td  Dy  Ho  Er  Tm  Yb  Lu\n")
     print("Ac ~ Lr  Ac Th Pa U  Np Pu (括号内有数字的元素可用)\n\n\n")
     print("酸根(算作一种元素):OH(8.1)  SO₄(16.8)  SO₃(16.8.0)  CO₃(6.8) HCO₃(1.6.8) HSO₄(1.16.8) HSO₃(1.16.8.0) ClO(17.8.0.1) ClO₂(17.8.0.2) ClO₃(17.8.0.3) ClO₄(17.8.0.4)")
 def element_choic():
@@ -218,7 +255,7 @@ def element_choic():
     print("输入元素的顺序必须按官网文档的格式(a化b，a前b后；酸按氢，酸根；碱按金属离子，氢氧根；盐按金属离子，酸根进行排列)\n\n")
     strr="请选择您想组成的化学物质的第"+str(round_num+1)+"种元素:"
     element_choice=input(strr)
-    element_available_list=["1","1.6.8","1.16.8","1.16.8.0","2","3","6","6.8","8","8.1","11","16","16.8","16.8.0","17","17.8.0.1","17.8.0.2","17.8.0.3","17.8.0.4","20","26","29"]
+    element_available_list=["1","1.6.8","1.16.8","1.16.8.0","2","3","6","6.8","8","8.1","11","16","16.8","16.8.0","17","17.8.0.1","17.8.0.2","17.8.0.3","17.8.0.4","19","20","26","29"]
     while(element_choice not in element_available_list):
         print("您的输入有误，请重新输入")
         element_choice=input("请输入您想选择的元素的序号:")
@@ -292,6 +329,10 @@ def element_judge():
     if element_choice=="17.8.0.4":
         print("您选择的元素为高氯酸根(ClO₄)")
         element="ClO₄"
+        print("\n")
+    if element_choice=="19":
+        print("您选择的元素为钾(K)")
+        element="Ca"
         print("\n")
     if element_choice=="20":
         print("您选择的元素为钙(Ca)")
@@ -520,7 +561,8 @@ def inorganic_substance_build2():
                         process(i_s.name,i_s2.name,0,2)
                     else:
                         process(i_s.name,i_s2.name,0,0)
-                process(i_s.name,i_s2.name)
+                else:
+                    process(i_s.name,i_s2.name)
                 break
         if round_num==2:
             print("\n\n")
@@ -638,12 +680,14 @@ def operation():
                 print("\n\n")
                 if i_s.name=="硫酸" or i_s2.name=="硫酸":
                     choice=input("请选择硫酸的浓度(输入1或2指定浓或稀，输入其他内容将显示所有相关反应) 1.稀 2.浓:")
-                if choice=="1":
-                    process(i_s.name,i_s2.name,0,1)
-                elif choice=="2":
-                    process(i_s.name,i_s2.name,0,2)
+                    if choice=="1":
+                        process(i_s.name,i_s2.name,0,1)
+                    elif choice=="2":
+                        process(i_s.name,i_s2.name,0,2)
+                    else:
+                        process(i_s.name,i_s2.name,0,0)
                 else:
-                    process(i_s.name,i_s2.name,0,0)
+                    process(i_s.name,i_s2.name)
             else:
                 inorganic_substance_build2()
 def process(name1,name2,name3=0,name4=0):
@@ -897,9 +941,9 @@ def process(name1,name2,name3=0,name4=0):
     #碳酸氢盐和酸反应
     #钠
     elif "碳酸氢钠" in name_list and "硫酸" in name_list and name3==0:
-        print("Ca(HCO₃)₂+H₂SO₄======CaSO₄+2H₂O+2CO₂↑")
-    elif "碳酸氢钙" in name_list and "盐酸" in name_list and name3==0:
-        print("Ca(HCO₃)₂+2HCl======CaCl₂+2H₂O+2CO₂↑")
+        print("2NaHCO₃+H₂SO₄======Na₂SO₄+2H₂O+2CO₂↑")
+    elif "碳酸氢钠" in name_list and "盐酸" in name_list and name3==0:
+        print("NaHCO₃+HCl======NaCl+H₂O+CO₂↑")
     #钙
     elif "碳酸氢钠" in name_list and "硫酸" in name_list and name3==0:
         print("NaHCO₃+H₂SO₄======NaHSO₄+H₂O+CO₂↑")
@@ -966,6 +1010,8 @@ def process(name1,name2,name3=0,name4=0):
     #盐和盐反应
     elif "氯化钙" in name_list and "碳酸钠" in name_list and name3==0:
         print("CaCl₂+Na₂CO₃======CaCO₃↓+2NaCl")
+    elif "硫酸钙" in name_list and "碳酸钠" in name_list and name3==0:
+        print("CaSO₄+Na₂CO₃======CaCO₃↓+Na₂SO₄")
     #氢气还原反应
     elif "氧化铜" in name_list and "氢气" in name_list and name3==0:
         print("        Δ")
@@ -1019,7 +1065,7 @@ def process(name1,name2,name3=0,name4=0):
     #氯还原反应
     elif "硫化氢" in name_list and "氯气" in name_list and name3==0:
         print("Cl₂+H₂S=====2HCl+S↓")
-    #氯化的氧化还原反应
+    #含的氧化还原反应
     elif "氯化亚铁" in name_list and "氯气" in name_list and name3==0:
         print("2FeCl₂+Cl₂=====2FeCl₃")
     elif "氢氧亚铁" in name_list and "氯气" in name_list and name3==0:
@@ -1122,6 +1168,130 @@ def process(name1,name2,name3=0,name4=0):
         print("NaH+H₂O======NaOH+H₂↑")
     elif "氢化钙" in name_list and "水" in name_list and name3==0:
         print("CaH₂+H₂O======Ca(OH)₂+2H₂↑")
+    #归中反应和含氯酸盐和酸反应
+    #钠
+    elif "次氯酸钠" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO+2HCl(浓)======NaCl+Cl₂↑+H₂O")
+        #print("NaClO+HCl(稀)======HClO+NaCl")
+    elif "亚氯酸钠" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO₂+4HCl(浓)======NaCl+2Cl₂↑+2H₂O")
+        #print("5NaClO₂+4HCl(稀)======4ClO₂+5NaCl+2H₂O")
+    elif "氯酸钠" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO₃+6HCl(浓)======NaCl+3Cl₂↑+3H₂O")
+        #print("NaClO₃+4HCl(稀)======ClO₂+2Cl₂↑+2H₂O")
+    elif "高氯酸钠" in name_list and "盐酸" in name_list and name3==0:
+        print("NaClO₄+8HCl(浓)======NaCl+4Cl₂↑+4H₂O")
+    elif "次氯酸钠" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO+H₂SO₄======NaHSO₄+HClO")
+        print("2NaClO+H₂SO₄======Na₂SO₄+2HClO")
+    elif "亚氯酸钠" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO₂+H₂SO₄======NaHSO₄+HClO₂")
+        print("2NaClO₂+H₂SO₄======Na₂SO₄+2HClO₂")
+    elif "氯酸钠" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO₃+H₂SO₄======NaHSO₄+HClO₃")
+        print("2NaClO₃+H₂SO₄======Na₂SO₄+2HClO₃")
+    elif "高氯酸钠" in name_list and "硫酸" in name_list and name3==0:
+        print("NaClO₄+H₂SO₄======NaHSO₄+HClO₄")
+        print("2NaClO₄+H₂SO₄======Na₂SO₄+2HClO₄")
+    #钙
+    elif "次氯酸钙" in name_list and "盐酸" in name_list and name3==0:
+        print("Ca(ClO)₂+4HCl(浓)======CaCl₂+Cl₂↑+2H₂O")
+    elif "亚氯酸钙" in name_list and "盐酸" in name_list and name3==0:
+        print("Ca(ClO₂)₂+8HCl(浓)======CaCl₂+4Cl₂↑+4H₂O")
+    elif "氯酸钙" in name_list and "盐酸" in name_list and name3==0:
+        print("Ca(ClO₃)₂+12HCl(浓)======CaCl₂+6Cl₂↑+6H₂O")
+    elif "高氯酸钙" in name_list and "盐酸" in name_list and name3==0:
+        print("Ca(ClO₄)₂+16HCl(浓)======CaCl₂+8Cl₂↑+8H₂O")
+    elif "次氯酸钙" in name_list and "硫酸" in name_list and name3==0:
+        print("Ca(ClO)₂+2H₂SO₄======Ca(HSO₄)₂+2HClO")
+        print("Ca(ClO)₂+H₂SO₄======CaSO₄+2HClO")
+    elif "亚氯酸钙" in name_list and "硫酸" in name_list and name3==0:
+        print("Ca(ClO₂)₂+2H₂SO₄======Ca(HSO₄)₂+2HClO₂")
+        print("Ca(ClO₂)₂+H₂SO₄======CaSO₄+2HClO₂")
+    elif "氯酸钙" in name_list and "硫酸" in name_list and name3==0:
+        print("Ca(ClO₃)₂+2H₂SO₄======Ca(HSO₄)₂+2HClO₃")
+        print("Ca(ClO₃)₂+H₂SO₄======CaSO₄+2HClO₃")
+    elif "高氯酸钙" in name_list and "硫酸" in name_list and name3==0:
+        print("Ca(ClO₄)₂+2H₂SO₄======Ca(HSO₄)₂+2HClO₄")
+        print("Ca(ClO₄)₂+H₂SO₄======CaSO₄+2HClO₄")
+    #氯的氧化物和氧气
+    elif "一氧化氯" in name_list and "氧气" in name_list and name3==0:
+        print("        点燃")
+        print("2ClO+O₂======2ClO₂")
+    #氯歧化反应
+    #水
+    elif "一氧化氯" in name_list and "水" in name_list and name3==0:
+        print("2ClO+H₂O======HClO+HClO₂")
+    elif "二氧化氯" in name_list and "水" in name_list and name3==0:
+        print("2ClO₂+H₂O======HClO₃+HClO₂")
+    elif "三氧化氯" in name_list and "水" in name_list and name3==0:
+        print("2ClO₃+H₂O======HClO₄+HClO₃")
+    #碱
+    elif "一氧化氯" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("2ClO+2NaOH======NaClO+NaClO₂+H₂O")
+    elif "二氧化氯" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("2ClO₂+2NaOH======NaClO₃+NaClO₂+H₂O")
+    elif "三氧化氯" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("2ClO₃+2NaOH======NaClO₄+NaClO₃+H₂O")
+    elif "一氧化氯" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("4ClO+2Ca(OH)₂======Ca(ClO₂)₂+Ca(ClO)₂+2H₂O")
+    elif "二氧化氯" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("4ClO₂+2Ca(OH)₂======Ca(ClO₃)₂+Ca(ClO₂)₂+H₂O")
+    elif "三氧化氯" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("4ClO₃+2Ca(OH)₂======Ca(ClO₄)₂+Ca(ClO₃)₂+H₂O")
+    #盐和水
+    elif "次氯酸钠" in name_list and "水" in name_list and name3==0:
+        print("NaClO+H₂O======NaOH+HClO(可逆)")
+    elif "亚氯酸钠" in name_list and "水" in name_list and name3==0:
+        print("NaClO₂+H₂O======NaOH+HClO₂(可逆)")
+    elif "氯酸钠" in name_list and "水" in name_list and name3==0:
+        print("NaClO₃+H₂O======NaOH+HClO₃(可逆)")
+    elif "高氯酸钠" in name_list and "水" in name_list and name3==0:
+        print("NaClO₄+H₂O======NaOH+HClO₄(可逆)")
+    elif "次氯酸钙" in name_list and "水" in name_list and name3==0:
+        print("Ca(ClO)₂+2H₂O======Ca(OH)₂+2HClO(可逆)")
+    elif "亚氯酸钙" in name_list and "水" in name_list and name3==0:
+        print("Ca(ClO₂)₂+2H₂O======Ca(OH)₂+2HClO₂(可逆)")
+    elif "氯酸钙" in name_list and "水" in name_list and name3==0:
+        print("Ca(ClO₃)₂+2H₂O======Ca(OH)₂+2HClO₃(可逆)")
+    elif "高氯酸钙" in name_list and "水" in name_list and name3==0:
+        print("Ca(ClO₄)₂+2H₂O======Ca(OH)₂+2HClO₄(可逆)")
+    #酸和碱
+    elif "次氯酸" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("NaOH+HClO======NaClO+H₂O(可逆)")
+    elif "亚氯酸" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("NaOH+HClO₂======NaClO₂+H₂O(可逆)")
+    elif "正氯酸" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("NaOH+HClO₃======NaClO₃+H₂O(可逆)")
+    elif "高氯酸" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("NaOH+HClO₄======NaClO₄+H₂O(可逆)")
+    elif "次氯酸" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("Ca(OH)₂+2HClO======Ca(ClO)₂+2H₂O(可逆)")
+    elif "亚氯酸" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("Ca(OH)₂+2HClO₂======Ca(ClO₂)₂+2H₂O(可逆)")
+    elif "氯酸" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("Ca(OH)₂+2HClO₃======Ca(ClO₃)₂+2H₂O(可逆)")
+    elif "高氯酸" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("Ca(OH)₂+2HClO₄======Ca(ClO₄)₂+2H₂O(可逆)")
+    #酸式盐和碱反应
+    elif "碳酸氢钙" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("Ca(HCO₃)₂+NaOH======NaHCO₃+CaCO₃↓+H₂O")
+        print("Ca(HCO₃)₂+2NaOH======Na₂CO₃+CaCO₃↓+2H₂O")
+    elif "硫酸氢钙" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("Ca(HSO₄)₂+NaOH======NaHSO₄+CaSO₄+H₂O")
+        print("Ca(HSO₄)₂+2NaOH======Na₂SO₄+CaSO₄+2H₂O")
+    elif "亚硫酸氢钙" in name_list and "氢氧化钠" in name_list and name3==0:
+        print("Ca(HSO₃)₂+NaOH======NaHSO₃+CaSO₃+H₂O")
+        print("Ca(HSO₃)₂+2NaOH======Na₂SO₃+CaSO₃+2H₂O")
+    elif "碳酸氢钠" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("2NaHCO₃+Ca(OH)₂======Na₂CO₃+CaCO₃↓+2H₂O")
+        print("NaHCO₃+Ca(OH)₂======NaOH+CaCO₃↓+H₂O")
+    elif "硫酸氢钠" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("2NaHSO₄+Ca(OH)₂======Na₂SO₄+CaSO₄+2H₂O")
+        print("NaHSO₄+Ca(OH)₂======NaOH+CaSO₄+H₂O")
+    elif "亚硫酸氢钠" in name_list and "氢氧化钙" in name_list and name3==0:
+        print("2NaHSO₃+Ca(OH)₂======Na₂SO₃+CaSO₃↓+2H₂O")
+        print("NaHSO₄+Ca(OH)₂======NaOH+CaSO₃↓o+H₂O")
     #其他反应
     elif "亚硫酸钠" in name_list and "次氯酸钠" in name_list and name3==0:
         print("NaClO+Na₂SO₃======NaCl+Na₂SO₄")
