@@ -1,3 +1,5 @@
+#打包好的可执行文件在release目录下的zip目录中，解压到本体随开随用。
+
 # Professional-Chemical-Terminal_v0.0
 
 本项目为专业的化学查询与反应终端，随点随用，教程在每个版本的 压缩包内。
