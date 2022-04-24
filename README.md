@@ -1,4 +1,4 @@
-#打包好的可执行文件在release目录下的zip目录中，解压到本体随开随用。
+#打包好的可执行文件在resources目录中的zip目录下，解压到本体随开随用。
 
 # Professional-Chemical-Terminal_v0.0
 
